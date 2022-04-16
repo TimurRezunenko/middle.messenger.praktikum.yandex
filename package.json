@@ -1,0 +1,27 @@
+{
+  "name": "yandex_practicum",
+  "version": "1.0.0",
+  "description": "Training project for Yandex Practicum",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex.git"
+  },
+  "keywords": [
+    "Yandex",
+    "Practicum"
+  ],
+  "author": "Timur Rezunenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex/issues"
+  },
+  "homepage": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex#readme",
+  "devDependencies": {
+    "parcel": "2.4.1"
+  }
+}
