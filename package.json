@@ -2,10 +2,9 @@
   "name": "yandex_practicum",
   "version": "1.0.0",
   "description": "Training project for Yandex Practicum",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel index.hbs",
+    "build": "parcel build index.hbs"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
     "parcel": "2.4.1"
   }
 }
