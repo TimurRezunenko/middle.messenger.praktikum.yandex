@@ -1,42 +1,57 @@
 {
-  "name": "yandex_practicum",
-  "version": "1.0.0",
-  "description": "Training project for Yandex Practicum",
-  "scripts": {
-    "prebuild": "engine-version",
-    "dev": "parcel index.hbs",
-    "build": "parcel build index.hbs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex.git"
-  },
-  "keywords": [
-    "Yandex",
-    "Practicum"
-  ],
-  "author": "Timur Rezunenko",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex/issues"
-  },
-  "homepage": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex#readme",
-  "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "1.0.9",
-    "@parcel/optimizer-cssnano": "2.4.1",
-    "autoprefixer": "10.4.4",
-    "handlebars": "4.7.7",
-    "parcel": "2.4.1",
-    "parcel-plugin-static-files-copy": "2.6.0",
-    "postcss": "8.4.12",
-    "postcss-nested": "5.0.6"
-  },
-  "dependencies": {
-    "express": "4.17.3"
-  },
-  "staticFiles": {
-    "staticPath": [
-      "static"
-    ]
-  }
+    "name": "yandex_practicum",
+    "version": "1.0.0",
+    "description": "Training project for Yandex Practicum",
+    "scripts": {
+        "prebuild": "engine-version",
+        "dev": "parcel index.hbs",
+        "build": "parcel build index.hbs",
+        "lint": "eslint . --ignore-path ./.gitignore",
+        "lint:write": "eslint --fix .",
+        "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex.git"
+    },
+    "keywords": [
+        "Yandex",
+        "Practicum"
+    ],
+    "author": "Timur Rezunenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex/issues"
+    },
+    "homepage": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex#readme",
+    "devDependencies": {
+        "@anikin/parcel-transformer-handlebars": "1.0.9",
+        "@parcel/optimizer-cssnano": "2.4.1",
+        "@typescript-eslint/eslint-plugin": "5.19.0",
+        "@typescript-eslint/parser": "5.19.0",
+        "autoprefixer": "10.4.4",
+        "babel-eslint": "10.1.0",
+        "eslint": "8.13.0",
+        "eslint-config-prettier": "8.5.0",
+        "eslint-plugin-prettier": "4.0.0",
+        "eslint-plugin-react": "7.29.4",
+        "handlebars": "4.7.7",
+        "parcel": "2.4.1",
+        "parcel-plugin-static-files-copy": "2.6.0",
+        "postcss": "8.4.12",
+        "postcss-nested": "5.0.6",
+        "pre-commit": "1.2.2"
+    },
+    "dependencies": {
+        "express": "4.17.3"
+    },
+    "pre-commit": [
+        "lint:write",
+        "prettier"
+    ],
+    "staticFiles": {
+        "staticPath": [
+            "static"
+        ]
+    }
 }
