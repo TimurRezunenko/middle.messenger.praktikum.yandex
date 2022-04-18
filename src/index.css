@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../static/fonts/roboto.woff2') format('woff2'),
+    url('../static/fonts/roboto.woff') format('woff'),
+    url('../static/fonts/roboto.ttf') format('truetype'),
+    url('../static/fonts/roboto.svg#Roboto') format('svg');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Roboto, Arial;
+    font-size: 14px;
+}

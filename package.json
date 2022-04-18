@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Training project for Yandex Practicum",
   "scripts": {
+    "prebuild": "engine-version",
     "dev": "parcel index.hbs",
     "build": "parcel build index.hbs"
   },
@@ -22,6 +23,20 @@
   "homepage": "https://github.com/TimurRezunenko/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "1.0.9",
-    "parcel": "2.4.1"
+    "@parcel/optimizer-cssnano": "2.4.1",
+    "autoprefixer": "10.4.4",
+    "handlebars": "4.7.7",
+    "parcel": "2.4.1",
+    "parcel-plugin-static-files-copy": "2.6.0",
+    "postcss": "8.4.12",
+    "postcss-nested": "5.0.6"
+  },
+  "dependencies": {
+    "express": "4.17.3"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "static"
+    ]
   }
 }
