@@ -4,7 +4,9 @@ export default `
       <h1 class="login-form__title">Вход</h1>  
       {{> loginField}}
       {{> passwordField}}
-      {{> login}}
-      <a href="registration" class="login-form__link">Нет аккаунта? Зарегистрироваться</a>
+      <div class="login-form__controls">
+          {{> login}}
+          <a href="registration" class="login-form__link">Нет аккаунта? Зарегистрироваться</a>
+      </div>
   </form>
 </div>`;

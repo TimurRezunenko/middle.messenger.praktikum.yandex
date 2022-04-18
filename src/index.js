@@ -1,10 +1,9 @@
 "use strict";
-import { login } from './pages/login/login';
+import pageRouter from './utils/pageRouter';
 
 import './index.css';
 
 (function() {
     const root = document.getElementById("root");
-    const template = login();
-    root.innerHTML = template;
+    root.innerHTML = pageRouter();
 })();
