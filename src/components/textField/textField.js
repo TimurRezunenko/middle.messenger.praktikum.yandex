@@ -11,11 +11,9 @@ export const textField = ({
     placeholder,
     error,
     helperText,
-    required
+    required,
 }) => {
-    const className = `text-field${
-        (error && `  text-field--error`) || ''
-    }`;
+    const className = `text-field${(error && `  text-field--error`) || ''}`;
 
     return Handlebars.compile(tmpl)({
         type,

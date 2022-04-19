@@ -25,16 +25,26 @@ export const registration = () => {
     );
     Handlebars.registerPartial(
         'lastNameField',
+
         textField({ name: 'lastName', label: 'Фамилия', required: true })
     );
     Handlebars.registerPartial(
         'phoneField',
-        textField({ name: 'phone', label: 'Телефон', type: 'tel',
-            required: true })
+        textField({
+            name: 'phone',
+            label: 'Телефон',
+            type: 'tel',
+            required: true,
+        })
     );
     Handlebars.registerPartial(
         'passwordField',
-        textField({ name: 'password', label: 'Пароль', type: 'password', required: true })
+        textField({
+            name: 'password',
+            label: 'Пароль',
+            type: 'password',
+            required: true,
+        })
     );
     Handlebars.registerPartial(
         'repeatPasswordField',
@@ -43,7 +53,7 @@ export const registration = () => {
             label: 'Пароль (еще раз)',
             type: 'password',
             required: true,
-            error: true
+            error: true,
         })
     );
     Handlebars.registerPartial(
