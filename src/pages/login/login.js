@@ -18,7 +18,8 @@ export const login = () => {
         'login',
         button({
             value: 'Войти',
-            type: 'submit',
+            // type: 'submit',
+            href: '/chats',
             className: 'login-form__button',
         })
     );

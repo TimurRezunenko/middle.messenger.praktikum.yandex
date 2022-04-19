@@ -15,6 +15,6 @@ export default `
         </div>
     {{/each}}
     <div class="chats_page__end">
-      <span>Чатов больше нет! Начните </span><a href="select-chat" class="chats-page__new" title="Add new chat">новый!</a>
+      <span>Чатов больше нет! Начните </span><a href="/" class="chats-page__new" title="Add new chat">новый!</a>
     </div>
 </div>`;

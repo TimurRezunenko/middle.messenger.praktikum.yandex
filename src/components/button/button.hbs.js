@@ -1,10 +1,9 @@
 export default `
-<input 
-    type="{{type}}" 
-    value="{{value}}" 
-    class="{{className}}"
-    {{#if onClick}}
-        onclick="{{onClick}}" 
-    {{/if}}
-/>
+<a href="{{href}}">
+    <input 
+        type="{{type}}" 
+        value="{{value}}" 
+        class="{{className}}"
+    />
+</a>
 `;

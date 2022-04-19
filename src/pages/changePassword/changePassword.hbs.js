@@ -1,11 +1,11 @@
 export default `
-<div class="profile-page">
-  <form action="/api/login" class="profile-form">  
+<div class="change-password-page">
+  <form action="/api/login" class="change-password-form">  
       {{> header }}
       {{> oldPasswordField}}  
       {{> passwordField}}
       {{> repeatPasswordField}}
-      <div class="profile-page__controls">
+      <div class="change-password-page__controls">
           {{> saveBtn}}
           {{> cancelBtn}}
       </div>

@@ -60,6 +60,7 @@ export const profile = () => {
         'changePasswordBtn',
         button({
             value: 'Сменить пароль',
+            href: 'change-password',
             className: 'profile-page__btn',
         })
     );
@@ -68,6 +69,7 @@ export const profile = () => {
         'closeBtn',
         button({
             value: 'Выйти',
+            href: 'chats',
             variant: ButtonVariant.DEFAULT,
         })
     );
