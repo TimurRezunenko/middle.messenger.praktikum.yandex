@@ -48,7 +48,7 @@
         "express": "4.17.3"
     },
     "lint-staged": {
-        "*.*": [
+        "*.{js,jsx,ts,tsx,css}": [
             "npm run lint:write",
             "npm run prettier",
             "git add"
