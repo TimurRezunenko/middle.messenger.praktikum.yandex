@@ -3,8 +3,7 @@
     "version": "1.0.0",
     "description": "Training project for Yandex Practicum",
     "scripts": {
-        "prebuild": "engine-version",
-        "dev": "parcel index.hbs",
+        "start": "parcel index.hbs",
         "build": "parcel build index.hbs",
         "lint": "eslint . --ignore-path ./.gitignore",
         "lint:write": "eslint --fix .",
