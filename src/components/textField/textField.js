@@ -5,15 +5,18 @@ import tmpl from './textField.hbs';
 import './textField.pcss';
 
 export const textField = ({
-    type = 'text',
-    label = '',
-    name = '',
     placeholder,
     error,
     helperText,
+    className,
+    type = 'text',
+    label = '',
+    name = '',
     required,
 }) => {
-    const className = `text-field${(error && `  text-field--error`) || ''}`;
+    className = `text-field${(className && `  ${className}`) || ''}${
+        (error && `  text-field--error`) || ''
+    }`;
 
     return Handlebars.compile(tmpl)({
         type,
@@ -22,7 +25,7 @@ export const textField = ({
         error,
         className,
         helperText,
-        required,
+        ...(required && { required }),
         placeholder: placeholder === undefined ? label : placeholder,
     });
 };

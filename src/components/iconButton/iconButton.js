@@ -4,14 +4,21 @@ import Handlebars from 'handlebars';
 import tmpl from './iconButton.hbs';
 import './iconButton.pcss';
 
+const DEFAULT_ICON_WIDTH = 24;
+
 export const iconButton = ({
     value,
     onClick,
-    type = 'button',
     className,
     icon,
+    height,
+    width = DEFAULT_ICON_WIDTH,
+    type = 'button',
 }) => {
     className = `button  ${className}`.trim();
+    if (!height) {
+        height = width;
+    }
 
     return Handlebars.compile(tmpl)({
         value,
@@ -19,5 +26,7 @@ export const iconButton = ({
         onClick,
         className,
         icon,
+        width,
+        height,
     });
 };

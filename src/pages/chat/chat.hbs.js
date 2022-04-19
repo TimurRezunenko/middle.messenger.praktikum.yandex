@@ -11,4 +11,11 @@ export default `
             </div>
         {{/each}}
     </div>
+    
+    <form class="controls">
+        {{> smileBtn }}
+        {{> messageField }}
+        {{> attachmentBtn }}
+        {{> micBtn }}
+    </form>
 </div>`;

@@ -1,4 +1,5 @@
 .chat-page {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -66,4 +67,23 @@
     }
 }
 
+.controls {
+    position: fixed;
+    display: flex;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: flex-end;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.controls__message {
+    flex: 1 1 100%;
+    margin: auto;
+
+    & .text-field__input {
+        border-bottom: none;
+    }
+}
 
