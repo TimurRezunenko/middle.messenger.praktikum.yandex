@@ -7,7 +7,7 @@ import { ICONS } from '../../icons/icons';
 
 import './appBar.pcss';
 
-export const appBar = () => {
+export const appBar = ({ title }) => {
     Handlebars.registerPartial('menuBtn', iconButton({ icon: ICONS.BURGER }));
     Handlebars.registerPartial('noticeBtn', iconButton({ icon: ICONS.BELL }));
     Handlebars.registerPartial('searchBtn', iconButton({ icon: ICONS.SEARCH }));
@@ -16,5 +16,5 @@ export const appBar = () => {
         iconButton({ icon: ICONS.PROFILE })
     );
 
-    return Handlebars.compile(tmpl)({ title: 'Чаты' });
+    return Handlebars.compile(tmpl)({ title });
 };

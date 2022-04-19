@@ -1,18 +1,21 @@
 import { login } from '../pages/login/login';
 import { registration } from '../pages/registration/registration';
 import { error } from '../pages/error/error';
+import { chat } from '../pages/chat/chat';
 import { chats } from '../pages/chats/chats';
 
 const pageRouter = () => {
     const path = window.location.pathname.substr(1);
 
     switch (path) {
+        case 'chat':
+            return chat();
+        case 'chats':
+            return chats();
         case 'login':
             return login();
         case 'registration':
             return registration();
-        case 'chats':
-            return chats();
         case '500':
             return error({
                 error: 500,

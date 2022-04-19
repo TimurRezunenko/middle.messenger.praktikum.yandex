@@ -27,7 +27,7 @@ const chatList = [
 ];
 
 export const chats = (props) => {
-    Handlebars.registerPartial('appBar', appBar());
+    Handlebars.registerPartial('appBar', appBar({ title: 'Чаты' }));
 
     return Handlebars.compile(tmpl)({ ...props, data: chatList });
 };
