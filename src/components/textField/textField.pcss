@@ -2,6 +2,19 @@
     display: flex;
     margin-bottom: 12px;
     flex-direction: column-reverse;
+
+    &--error {
+        color: red;
+        opacity: 0.8;
+
+        & .text-field__input {
+            color: red;
+        }
+
+        & .text_field__helper {
+            color: red;
+        }
+    }
 }
 
 .text-field__label {
@@ -50,13 +63,8 @@
     }
 }
 
-.text-field__helper {
+.text_field__helper {
     margin: 4px 0 0;
     color: #212529;
-    opacity: 0.4;
-
-    &--error {
-        color: red;
-        opacity: 0.8;
-    }
+    opacity: 0.8;
 }

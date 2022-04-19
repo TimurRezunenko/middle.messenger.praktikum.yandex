@@ -4,6 +4,7 @@ import Handlebars from 'handlebars';
 import tmpl from './registration.hbs';
 import { textField } from '../../components/textField/textField';
 import { button } from '../../components/button/button';
+
 import './registration.pcss';
 
 export const registration = () => {
@@ -16,23 +17,24 @@ export const registration = () => {
     );
     Handlebars.registerPartial(
         'loginField',
-        textField({ name: 'login', label: 'Логин' })
+        textField({ name: 'login', label: 'Логин', required: true })
     );
     Handlebars.registerPartial(
         'firstNameField',
-        textField({ name: 'firstName', label: 'Имя' })
+        textField({ name: 'firstName', label: 'Имя', required: true })
     );
     Handlebars.registerPartial(
         'lastNameField',
-        textField({ name: 'lastName', label: 'Фамилия' })
+        textField({ name: 'lastName', label: 'Фамилия', required: true })
     );
     Handlebars.registerPartial(
         'phoneField',
-        textField({ name: 'phone', label: 'Телефон' })
+        textField({ name: 'phone', label: 'Телефон', type: 'tel',
+            required: true })
     );
     Handlebars.registerPartial(
         'passwordField',
-        textField({ name: 'password', label: 'Пароль', type: 'password' })
+        textField({ name: 'password', label: 'Пароль', type: 'password', required: true })
     );
     Handlebars.registerPartial(
         'repeatPasswordField',
@@ -40,6 +42,8 @@ export const registration = () => {
             name: 'repeatPassword',
             label: 'Пароль (еще раз)',
             type: 'password',
+            required: true,
+            error: true
         })
     );
     Handlebars.registerPartial(

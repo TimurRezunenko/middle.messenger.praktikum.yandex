@@ -11,9 +11,10 @@ export const textField = ({
     placeholder,
     error,
     helperText,
+    required
 }) => {
-    const helperClass = `text-field__helper${
-        (error && `  text-field__helper--error`) || ''
+    const className = `text-field${
+        (error && `  text-field--error`) || ''
     }`;
 
     return Handlebars.compile(tmpl)({
@@ -21,8 +22,9 @@ export const textField = ({
         label,
         name,
         error,
-        helperClass,
+        className,
         helperText,
+        required,
         placeholder: placeholder === undefined ? label : placeholder,
     });
 };
