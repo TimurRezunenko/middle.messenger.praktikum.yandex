@@ -12,6 +12,7 @@ export const iconButton = ({
     className,
     icon,
     height,
+    href,
     width = DEFAULT_ICON_WIDTH,
     type = 'button',
 }) => {
@@ -28,5 +29,6 @@ export const iconButton = ({
         icon,
         width,
         height,
+        href,
     });
 };

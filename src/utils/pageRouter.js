@@ -16,12 +16,15 @@ const pageRouter = () => {
             return chat();
         case 'chats':
             return chats();
-        case 'login':
-            return login();
         case 'profile':
             return profile();
         case 'registration':
             return registration();
+        case '404':
+            return error({
+                error: 404,
+                description: 'Упс.. Похоже, что страницы не существует',
+            });
         case '500':
             return error({
                 error: 500,
@@ -29,10 +32,7 @@ const pageRouter = () => {
             });
     }
 
-    return error({
-        error: 404,
-        description: 'Упс.. Похоже, что страницы не существует',
-    });
+    return login();
 };
 
 export default pageRouter;

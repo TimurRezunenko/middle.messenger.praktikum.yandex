@@ -13,7 +13,7 @@ export const appBar = ({ title }) => {
     Handlebars.registerPartial('searchBtn', iconButton({ icon: ICONS.SEARCH }));
     Handlebars.registerPartial(
         'profileBtn',
-        iconButton({ icon: ICONS.PROFILE })
+        iconButton({ icon: ICONS.PROFILE, href: 'profile' })
     );
 
     return Handlebars.compile(tmpl)({ title });

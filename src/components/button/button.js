@@ -12,8 +12,9 @@ export const ButtonVariant = {
 export const button = ({
     value,
     onClick,
-    type = 'button',
     className,
+    href,
+    type = 'button',
     variant = ButtonVariant.OUTLINE,
 }) => {
     className = `button  ${className}  ${
@@ -25,5 +26,6 @@ export const button = ({
         type,
         onClick,
         className,
+        href,
     });
 };

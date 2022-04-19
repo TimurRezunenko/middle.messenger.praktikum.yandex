@@ -48,7 +48,8 @@ export const changePassword = () => {
         'saveBtn',
         button({
             value: 'Сохранить',
-            className: 'profile-page__btn',
+            href: 'profile',
+            className: 'change-password__btn',
         })
     );
 
@@ -56,6 +57,7 @@ export const changePassword = () => {
         'cancelBtn',
         button({
             value: 'Отменить',
+            href: 'profile',
             variant: ButtonVariant.DEFAULT,
         })
     );
