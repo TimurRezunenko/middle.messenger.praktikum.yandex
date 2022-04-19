@@ -1,6 +1,7 @@
 import { login } from '../pages/login/login';
 import { registration } from '../pages/registration/registration';
 import { error } from '../pages/error/error';
+import { chats } from '../pages/chats/chats';
 
 const pageRouter = () => {
     const path = window.location.pathname.substr(1);
@@ -10,6 +11,8 @@ const pageRouter = () => {
             return login();
         case 'registration':
             return registration();
+        case 'chats':
+            return chats();
         case '500':
             return error({
                 error: 500,
