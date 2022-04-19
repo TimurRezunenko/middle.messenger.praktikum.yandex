@@ -1,10 +1,10 @@
 export default `
 <input 
-    type={{type}} 
-    value={{value}} 
+    type="{{type}}" 
+    value="{{value}}" 
     class="{{className}}"
     {{#if onClick}}
-        onclick={{onClick}} 
+        onclick="{{onClick}}" 
     {{/if}}
 />
 `;

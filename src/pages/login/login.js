@@ -1,4 +1,3 @@
-'use strict';
 import Handlebars from 'handlebars';
 
 import tmpl from './login.hbs';

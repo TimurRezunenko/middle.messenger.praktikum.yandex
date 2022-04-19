@@ -1,12 +1,20 @@
 import Handlebars from 'handlebars';
 
-import tmpl from './registration.hbs';
+import tmpl from './profile.hbs';
 import { textField } from '../../components/textField/textField';
-import { button } from '../../components/button/button';
+import { button, ButtonVariant } from '../../components/button/button';
+import { profileHeader } from './profileHeader/profileHeader';
 
-import './registration.pcss';
+import './profile.pcss';
 
-export const registration = () => {
+export const profile = () => {
+    Handlebars.registerPartial(
+        'header',
+        profileHeader({
+            lastName: 'Резуненко',
+            firstName: 'Тимур',
+        })
+    );
     Handlebars.registerPartial(
         'emailField',
         textField({
@@ -37,32 +45,35 @@ export const registration = () => {
         })
     );
     Handlebars.registerPartial(
-        'passwordField',
-        textField({
-            name: 'password',
-            label: 'Пароль',
-            type: 'password',
-            required: true,
-        })
+        'displayNameField',
+        textField({ name: 'display_name', label: 'Логин', required: true })
     );
+
     Handlebars.registerPartial(
-        'repeatPasswordField',
-        textField({
-            name: 'repeatPassword',
-            label: 'Пароль (еще раз)',
-            type: 'password',
-            required: true,
-            error: true,
-        })
-    );
-    Handlebars.registerPartial(
-        'register',
+        'changeBtn',
         button({
-            value: 'Зарегистрироваться',
-            type: 'submit',
-            className: 'registration-form__button',
+            value: 'Изменить данные',
+            className: 'profile-page__btn',
+        })
+    );
+    Handlebars.registerPartial(
+        'changePasswordBtn',
+        button({
+            value: 'Сменить пароль',
+            className: 'profile-page__btn',
         })
     );
 
-    return Handlebars.compile(tmpl)({});
+    Handlebars.registerPartial(
+        'closeBtn',
+        button({
+            value: 'Выйти',
+            variant: ButtonVariant.DEFAULT,
+        })
+    );
+
+    return Handlebars.compile(tmpl)({
+        lastName: 'Резуненко',
+        firstName: 'Тимур',
+    });
 };
