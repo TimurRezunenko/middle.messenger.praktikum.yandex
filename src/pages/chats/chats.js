@@ -5,8 +5,29 @@ import tmpl from './chats.hbs';
 import { appBar } from '../../components/appBar/appBar';
 import './chats.pcss';
 
-export const chats = (props) => {
-    Handlebars.registerPartial('appBar', appBar({}));
+const chatList = [
+    {
+        name: 'Андрей',
+        message: 'Привет! Как у тебя дела?',
+        newMessage: 3,
+        lastTime: '10:49',
+    },
+    {
+        name: 'Максим',
+        message: 'Изображение',
+        newMessage: 3,
+        lastTime: '10:44',
+    },
+    {
+        name: 'Валера',
+        message: 'Вы: Валера, настало твое время!',
+        newMessage: 0,
+        lastTime: '10:55',
+    },
+];
 
-    return Handlebars.compile(tmpl)(props);
+export const chats = (props) => {
+    Handlebars.registerPartial('appBar', appBar());
+
+    return Handlebars.compile(tmpl)({ ...props, data: chatList });
 };

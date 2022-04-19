@@ -4,7 +4,13 @@ import Handlebars from 'handlebars';
 import tmpl from './iconButton.hbs';
 import './iconButton.pcss';
 
-export const iconButton = ({ value, onClick, type = 'button', className }) => {
+export const iconButton = ({
+    value,
+    onClick,
+    type = 'button',
+    className,
+    icon,
+}) => {
     className = `button  ${className}`.trim();
 
     return Handlebars.compile(tmpl)({
@@ -12,5 +18,6 @@ export const iconButton = ({ value, onClick, type = 'button', className }) => {
         type,
         onClick,
         className,
+        icon,
     });
 };

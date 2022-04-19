@@ -3,14 +3,18 @@ import Handlebars from 'handlebars';
 
 import tmpl from './appBar.hbs';
 import { iconButton } from '../iconButton/iconButton';
+import { ICONS } from '../../icons/icons';
 
 import './appBar.pcss';
 
 export const appBar = () => {
-    Handlebars.registerPartial('menuBtn', iconButton({}));
-    Handlebars.registerPartial('noticeBtn', iconButton({}));
-    Handlebars.registerPartial('searchBtn', iconButton({}));
-    Handlebars.registerPartial('profileBtn', iconButton({}));
+    Handlebars.registerPartial('menuBtn', iconButton({ icon: ICONS.BURGER }));
+    Handlebars.registerPartial('noticeBtn', iconButton({ icon: ICONS.BELL }));
+    Handlebars.registerPartial('searchBtn', iconButton({ icon: ICONS.SEARCH }));
+    Handlebars.registerPartial(
+        'profileBtn',
+        iconButton({ icon: ICONS.PROFILE })
+    );
 
     return Handlebars.compile(tmpl)({ title: 'Чаты' });
 };

@@ -6,7 +6,7 @@ export default `
       {{> passwordField}}
       <div class="login-form__controls">
           {{> login}}
-          <a href="registration" class="login-form__link">Нет аккаунта? Зарегистрироваться</a>
+          <a href="registration" class="login-form__link" title="Register">Нет аккаунта? Зарегистрироваться</a>
       </div>
   </form>
 </div>`;

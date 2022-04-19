@@ -11,7 +11,7 @@ export default `
       {{> repeatPasswordField}}
       <div class="registration-form__controls">
           {{> register}}
-          <a href="login" class="registration-form__link">Войти</a>
+          <a href="login" class="registration-form__link" title="Login">Войти</a>
       </div>
   </form>
 </div>`;
